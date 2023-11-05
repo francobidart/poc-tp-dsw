@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="Atrás"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Producto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <img alt="" src="{{Articulo.imagen}}"/>
+    <ion-card-header>
+      <ion-card-title>
+        {{Articulo.nombre}}
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{Articulo.precio | currency: 'ARS':'symbol-narrow'}}</p>
+      <p>
+        VOSO
+        {{Articulo.descripcion}}
+      </p>
+      <br>
+      <ion-button expand="block">Comprar ahora</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
